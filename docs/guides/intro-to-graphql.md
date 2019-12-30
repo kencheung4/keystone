@@ -413,6 +413,18 @@ keystone.extendGraphQLSchema({
       schema: 'double(x: Int): Int',
       resolver: (_, { x }) => 2 * x,
     },
+    {
+      schema: `updatePageTitle(id: ID, title: String): Page`,
+      resolver: async (_, { id }) => {
+        const list = keystone.lists.Page; // assume we have list called Page
+        const oldItem = await list.adapter.findById(id);
+        const newItem = await list.adapter.update(id, {
+          ...oldItem,
+          title: title,
+        });
+        return newItem;
+      },
+    }
   ],
 });
 ```
