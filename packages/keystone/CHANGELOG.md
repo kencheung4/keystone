@@ -1,5 +1,15 @@
 # @keystonejs/keystone
 
+## 5.4.1
+
+### Patch Changes
+
+- [`05d07adf`](https://github.com/keystonejs/keystone/commit/05d07adf84059ff565cd2394f68d71d92e657485) [#2169](https://github.com/keystonejs/keystone/pull/2169) - Ensure executeQuery() does not throw when a queried field has cache hint setttings
+- Updated dependencies [[`38f88b62`](https://github.com/keystonejs/keystone/commit/38f88b62d9592d91b56528d4d9c40e9399440c4a)]:
+  - @keystonejs/build-field-types@5.1.4
+  - @keystonejs/fields@6.0.5
+  - @keystonejs/utils@5.1.3
+
 ## 5.4.0
 
 ### Minor Changes
